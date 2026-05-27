@@ -2,6 +2,7 @@ const num = document.getElementById('count');
 const incrementBtn = document.getElementById('increment');
 const decrementBtn = document.getElementById('decrement');
 const resetBtn = document.getElementById('reset');
+const x2Btn = document.getElementById('X2');
 const message = document.getElementById('message');
 function updateColor(count) {
     if (count > 0) {
@@ -52,3 +53,10 @@ resetBtn.addEventListener('click', () => {
     updateColor(count);
     updateMessage(count);
 })
+x2Btn.addEventListener('click', () => {
+    count = count * 2;
+    num.textContent = count;
+    messageCount++;
+    updateColor(count);
+    updateMessage(count);
+});
